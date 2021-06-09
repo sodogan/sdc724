@@ -1,0 +1,79 @@
+[
+  {
+    "id": "283f13d5-f609-4fbe-be0a-5bebc3958183",
+    "createdAt": 1607789230025,
+    "updatedAt": 1607789232546,
+    "createdBy": "admin",
+    "updatedBy": "admin",
+    "stepNo": "1",
+    "template": "PT-Süd",
+    "status": "asap",
+    "details": "CUHD CoC or User inform SDC Hotline  +90 212 867 3777"
+  },
+  {
+    "id": "95dacf40-b6b4-4800-8539-970877884b69",
+    "createdAt": 1607789177982,
+    "updatedAt": 1607789232546,
+    "createdBy": "admin",
+    "updatedBy": "admin",
+    "stepNo": "2",
+    "template": "PCC",
+    "status": "asap",
+    "details": "Inform MoD. If not reachable please contact MoD Back-Up."
+  },
+  {
+    "id": "95dacf40-b6b4-4800-8539-970877884b59",
+    "createdAt": 1607789177982,
+    "updatedAt": 1607789232546,
+    "createdBy": "admin",
+    "updatedBy": "admin",
+    "stepNo": "3",
+    "template": "PCC",
+    "status": "asap",
+    "details": "For the templates PIT, PTE and GSS, P1 Incidents are NOT applicable (agreement with CoC)."
+   },
+  {
+    "id": "95dacf40-b6b4-4800-8539-970877884b70",
+    "createdAt": 1607789177982,
+    "updatedAt": 1607789232546,
+    "createdBy": "admin",
+    "updatedBy": "admin",
+    "stepNo": "4",
+    "template": "PCS",
+    "status": "asap",
+    "details": "For MBVD Template, inform Middleware to takeover and work on P1 Ticket."
+  },
+  {
+    "id": "95dacf40-b6b4-4800-8539-970877884b59",
+    "createdAt": 1607789177982,
+    "updatedAt": 1607789232546,
+    "createdBy": "admin",
+    "updatedBy": "admin",
+    "stepNo": "5",
+    "template": "PCS",
+    "status": "asap",
+    "details": "When an urgent incident ticket created for EvoBUS and they have no ToD, please call E5 and E4."
+  },
+  {
+    "id": "95dacf40-b6b4-4800-8539-970877884b71",
+    "createdAt": 1607789177982,
+    "updatedAt": 1607789232546,
+    "createdBy": "admin",
+    "updatedBy": "admin",
+    "stepNo": "6",
+    "template": "PT-Nord",
+    "status": "asap",
+      "details": "Dump while stock movement"
+  },
+  {
+    "id": "95dacf40-b6b4-4800-8539-970877884b71",
+    "createdAt": 1607789177982,
+    "updatedAt": 1607789232546,
+    "createdBy": "admin",
+    "updatedBy": "admin",
+    "stepNo": "7",
+    "template": "PT-Nord",
+    "status": "asap",
+      "details": "Dump while stock movement"
+  }
+]

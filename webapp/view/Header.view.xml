@@ -1,0 +1,299 @@
+<mvc:View
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+	xmlns:f="sap.f"
+	xmlns:fb="sap.ui.comp.filterbar"
+	xmlns:grid="sap.ui.layout.cssgrid"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="demo.ui5.TodModApp.controller.Header">
+				<Page class="sapUiContentPadding sapUiResponsivePadding--header sapUiResponsivePadding--subHeader sapUiResponsivePadding--content sapUiResponsivePadding--footer">
+					<customHeader>
+					<Bar>
+						<contentLeft>
+						<Avatar
+							src="./media/sdc_logo.jpg"
+							displaySize="S"
+							displayShape="Circle"
+							showBorder="true"
+							press="onPress">
+						<detailBox>
+							<LightBox>
+								<LightBoxItem
+										imageSrc="./media/sdc_logo.jpg"
+										alt="SDC 7/24 Tod Mod App"
+										title="This is Beta Version"
+										subtitle="Powered by OpenUI5">
+								</LightBoxItem>
+							</LightBox>
+						</detailBox>
+	    				</Avatar>
+						</contentLeft>
+						<contentMiddle>
+						</contentMiddle>
+						<contentRight>
+                        <!-- <MessageStrip	text="version 1.0"	type="Information" showIcon="true"	class="sapUiSmallMarginBottom"/> -->
+						<Label text='{i18n>headerBarRightTitle}' tooltip="Share" /> 
+						</contentRight>
+					</Bar>
+					</customHeader>
+					<content>
+					
+					<!-- NOT VISIBLE NOW-->
+                         <Panel id="oHeaderPanelDate" 
+                                width="auto" class="sapUiResponsiveMargin" visible="false">
+								<ObjectHeader
+								    id='oObjectHeaderMain'
+								    binding="{/dates}"
+									responsive="true"
+									fullScreenOptimized="true"
+									icon ="./media/sdc_logo.jpg"
+									intro="{i18n>appDescription}"
+									title="SDC 7/24"
+									backgroundDesign="Transparent"
+									class="sapUiResponsivePadding--header">
+			 						<ObjectAttribute
+										title="Current Date"
+										text="{path:'currentDate'}"/>
+										<!-- text="{path:'currentDate',type: 'sap.ui.model.odata.type.DateTimeOffset', formatOptions: { relative: true, relativeScale: 'auto' }}"/> -->
+									<ObjectAttribute
+										title="Calender Week"
+										text="{path:'currentCalenderWeek'}"/> 
+									</ObjectHeader>
+						    </Panel>
+					   <IconTabBar id="oIconTabBarMain"
+					            class="sapUiResponsiveContentPadding"
+								select='.onSelectIconBar'
+								>
+					      <items>
+			
+							<!--Weekly Tod List-shows the weekly list of tods-->
+							<IconTabFilter
+								key="todList"
+								icon="sap-icon://employee-lookup"
+								iconColor="Positive"
+								>
+   							   <Title text="{i18n>iconTabFilterTodList}"  titleStyle="H2"/>
+
+								<Panel id='oPanelSearch' width="auto" class="sapUiResponsiveMargin" >
+									<headerToolbar>
+									  <!--
+									  <OverflowToolbar>
+									   <Button id ="btnCreateTicket" icon="sap-icon://add"  class="myTest" tooltip="Create New Ticket" press=".onCreateTicket"/> 
+						               	<Button icon="sap-icon://refresh" tooltip="refresh" press=".onRefreshTickets"/>
+										<ToolbarSeparator />
+										<Button icon="sap-icon://sort" tooltip="sort" press=".onSortTicketByID"/>
+										<ToolbarSeparator/>
+										<SearchField width="18rem" placeholder="Please enter a search criteria" search=".onSearchTicketByIDORTemplate"/> 
+									 </OverflowToolbar>
+								    -->
+								   </headerToolbar>
+                                 <content> 
+								 <l:VerticalLayout id='myTest'>
+								         <Title text="Template*"/>
+         								 <MultiComboBox id="oMultiComboTemplates" 
+										                valueState="Information"
+														class="sapUiMediumMarginBottom"
+														items="{
+														  path: '/templates',
+														  sorter: { path: 'name' }}" 
+														  selectionChange=".onSelectTemplatesChange"
+														  selectionFinish=".onSelectTemplatesFinish"
+														  >
+											<items>
+													<core:Item key="{id}" text="{path: 'name'}" />
+											</items>
+											</MultiComboBox>
+
+											<Label text="Module"/>
+            								 <MultiComboBox id="oMultiComboModules" 
+											         valueState="Information"
+													 class="sapUiSmallMarginBottom"
+													 items="{
+														path: '/modules',
+														sorter: { path: 'name' }}" 
+														>
+											<items>
+													<core:Item key="{id}" text="{name}" />
+											</items>
+											</MultiComboBox>
+     
+    <!--                                      <fb:FilterBar reset="onReset" search=".onSearchTodList" showRestoreButton="true" showClearButton="true">
+                                          <fb:filterGroupItems>
+                                      
+												<fb:FilterGroupItem groupName="G1" name="B" label="Templates" labelTooltip="Tooltip Example" mandatory="true" partOfCurrentVariant="true" visibleInFilterBar="true">
+													<fb:control>
+															<Select id="oSelectByTemplate" forceSelection="false"
+																items="{
+																path: '/templates',
+																sorter: { path: 'name' }}">
+																<core:Item key="{id}" text="{name}" />
+															</Select> 												
+														</fb:control>
+												</fb:FilterGroupItem>
+
+											<fb:FilterGroupItem groupName="G2" name="B" label="Modules" labelTooltip="Tooltip Example" mandatory="true" partOfCurrentVariant="true" visibleInFilterBar="true">
+													<fb:control>
+														<Select id="oSelectByModule"
+																forceSelection="false"
+																items="{
+																path: '/modules',
+																sorter: { path: 'name' }}">
+																<core:Item key="{id}" text="{name}" />
+														</Select>
+														</fb:control>
+												</fb:FilterGroupItem>
+
+                                        </fb:filterGroupItems>
+                                        </fb:FilterBar> -->
+ 
+                                        <ToolbarSpacer/>
+                                    </l:VerticalLayout >
+									</content>
+			    				</Panel>
+								<Panel width="auto" class="sapUiResponsiveMargin" >
+								  <f:GridList id="oGridListTodList"  items="{ path: '/tods', sorter: { path: 'templateName', ascending: true } }">
+									<f:headerToolbar>
+								 	</f:headerToolbar>
+										<f:customLayout>
+											<grid:GridBasicLayout gridTemplateColumns="repeat(auto-fit, minmax(16rem, 1fr))" gridGap="1rem"/>
+										</f:customLayout>
+										<f:GridListItem id="oGridListItemTodList" type="Active" press=".onUserDetailPressed">
+											<!--load fragment-->
+                                				<core:Fragment fragmentName="demo.ui5.TodModApp.view.fragments.TodList" type="XML"/>
+    										</f:GridListItem>
+                                         </f:GridList>
+							  </Panel>
+							</IconTabFilter>
+								<!--Weekly Mim list-->
+						  <IconTabFilter
+								key="mimList"
+								icon="sap-icon://account"
+								iconColor="Positive"
+								>
+							 <Panel>
+							   <Title text="{i18n>iconTabFilterMimList}" titleStyle="H2"/>
+								  <f:GridList id="oGridListMimList" items="{ path: '/mims', sorter: { path: 'templateName', ascending: true },groupHeaderFactory: '.getGroupHeader' }">
+									<f:headerToolbar>
+									</f:headerToolbar>
+										<f:customLayout>
+											<grid:GridBasicLayout gridTemplateColumns="repeat(auto-fit, minmax(16rem, 1fr))" gridGap="1rem"/>
+										</f:customLayout>
+										<f:GridListItem id="oGridListItemMimList" type="Active" press=".onUserDetailPressed">
+											<!--load fragment-->
+                                			<core:Fragment fragmentName="demo.ui5.TodModApp.view.fragments.MimList" type="XML"/>
+										</f:GridListItem>
+                                  </f:GridList>
+							</Panel>
+							</IconTabFilter>	
+							<!--Instructions-shows the steps to follow in Prio1 tickets-->
+								<IconTabFilter
+								key="instructionList"
+								icon="sap-icon://activities"
+								iconColor="Positive"
+								>
+								<Title text="{i18n>iconTabFilterInstructionList}" titleStyle="H2"/>
+								<Panel>
+            						<List  growing="true"  growingThreshold ="4" items="{path:'/instructions',sorter:{ path:'stepNo',ascending:true } }">
+									  <headerToolbar>
+								      </headerToolbar>
+			    					   <ObjectListItem icon ="sap-icon://step" title='Step No:{stepNo}' 
+									                intro ='Template:{template} Time: {status}'  type="Active" 
+													press='.onTicketListPress'
+													>
+									    <attributes>
+									    <ObjectAttribute text='Description:{details}'/>
+							 		    </attributes>
+									   </ObjectListItem>
+								</List>
+								</Panel>
+							</IconTabFilter>
+							<!--Important:Unvisible now-Tickets List-shows the tickets from CISM-->
+							<IconTabFilter
+								key="ticketList"
+								icon="sap-icon://workflow-tasks"
+								visible='true'>
+								<Title text="{i18n>iconTabFilterServiceNowList}" titleStyle="H2"/>
+								<Panel>
+            						<List id='ticketList'  items="{path:'/tickets',sorter:{ path:'urgency',ascending:true ,group:true},groupHeaderFactory: '.getGroupHeader' }">
+									<headerToolbar>
+									  <OverflowToolbar>
+									  <Button id ="btnCreateTicket" icon="sap-icon://add"  class="myTest" tooltip="Create New Ticket" press=".onCreateTicket"/>
+						              <ToolbarSeparator />
+                                      	<Button icon="sap-icon://refresh" tooltip="refresh" press=".onRefreshTickets"/>
+										<ToolbarSeparator />
+										<Button icon="sap-icon://sort" tooltip="sort" press=".onSortTicketByID"/>
+										<ToolbarSeparator/>
+										<SearchField width="18rem" placeholder="Please enter a search criteria" search=".onSearchTicketByIDORTemplate"/>
+									 </OverflowToolbar>
+								   </headerToolbar>
+			    					<ObjectListItem icon ="sap-icon://attachment" title='{short_description}' 
+									                intro ="Urgency: {path: 'urgency',formatter:'.formatter.urgencyText'}"  type="Navigation" 
+													press='.onTicketListPress'
+													>
+									 <attributes>
+									 <ObjectAttribute text='Due Date:{due_date}'/>
+							 		 </attributes>
+									 </ObjectListItem>
+								</List>
+								</Panel>
+						<!--NOT VISIBLE NOW-Weekly Mod list-->
+							</IconTabFilter>
+							  <IconTabFilter
+								key="modList"
+								icon="sap-icon://employee-lookup"
+								visible='false'>
+							   <Title text="{i18n>iconTabFilterModList}" titleStyle="H2"/>
+								  <f:GridList id="oGridListModList" items="{ path: '/mods', sorter: { path: 'templateName', ascending: true } }">
+									<f:headerToolbar>
+									</f:headerToolbar>
+										<f:customLayout>
+											<grid:GridBasicLayout gridTemplateColumns="repeat(auto-fit, minmax(16rem, 1fr))" gridGap="1rem"/>
+										</f:customLayout>
+										<f:GridListItem id="oGridListItemModList" type="Active" press=".onProductCardPressed">
+											<!--load fragment-->
+												<FlexBox direction="Column" class="sapUiSmallMargin">
+												<!-- <Button type="Transparent" 
+													icon="sap-icon://arrow-right" 
+													tooltip="{i18n>moreToolTip}"
+													visible="{device>/system/desktop}"
+													press=".onGoToDetail"/> 
+												<core:Icon
+														src="sap-icon://call"
+													class="sapUiSmallMarginTop"
+													color="#64E4CE" >
+													<core:layoutData>
+														<FlexItemData growFactor="1" />
+													</core:layoutData>
+												</core:Icon>-->
+												<FlexBox id='innerFlexModList' direction="Column" class="sapUiSmallMarginBegin">
+	     											<Title text="{firstName} {lastName}" titleStyle="H2"/>
+														<Label text="Manager:{manager}" class="sapUiTinyMarginTop"/>
+														<ObjectStatus icon="sap-icon://call" title="Primary:" text="{mobileNumber}" state="Error" class="sapUiMediumMarginTop"/> 
+														<ObjectStatus icon="sap-icon://call" title="Second" text="{backupMobileNumber}" state="Warning" class="sapUiTinyMarginTop"/>
+													</FlexBox>
+													</FlexBox>
+	
+												</f:GridListItem>
+	                                          </f:GridList>
+							</IconTabFilter>	
+                    	</items>
+	               </IconTabBar>
+            
+	        </content>
+          <footer>
+	           <Bar>
+				<contentLeft>
+					<Image src="{/sdcLogo}" height ="{/imageHeight}" width="{/imageWidth}" />	
+				</contentLeft>
+				<contentMiddle>
+				</contentMiddle>
+				<contentRight>
+					  <Button id ="btnSearch"  text='Search' type='Emphasized' tooltip="Search" press=".onSearchTodList"/>
+				</contentRight>
+			   </Bar>	
+	</footer>
+	 </Page>
+</mvc:View>

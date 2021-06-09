@@ -1,0 +1,32 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core"
+   xmlns:f="sap.ui.layout.form">
+   <Dialog id="createTicketDialog" title="Create New Ticket Form" contentWidth="30%">
+    <content>
+      <f:SimpleForm id="addProductForm" editable="true" layout="ResponsiveGridLayout" adjustLabelSpan="false" singleContainerFullSize="false">
+                <f:content>
+                    <Label text="CISM Ticket Ref" labelFor="inputTicketRef"/>
+                    <Input id="inputTicketRef" type="Number" placeholder="123" />
+                    <Label text="Template" labelFor="inputTemplate"/>
+                    <Input id="inputTemplate" placeholder="Template" />
+                    <Label text="Status" labelFor="inputStatus"/>
+                    <Input id="inputStatus"  placeholder="open" />
+                    <Label text="Assigned to" labelFor="inputAssignedTo"/>
+                    <Input id="inputAssignedTo"  placeholder="soolen" />
+                    <Label text="Details" labelFor="inputDetails"/>
+                    <TextArea id="inputDetails" placeholder="Enter details ..." />
+                </f:content>
+            </f:SimpleForm>
+    </content>
+      <beginButton>
+            <Button id="addProductSubmitButton" text="Submit" press=".onSubmitNewTicket"/>
+        </beginButton>
+        <endButton>
+            <Button id="addProductCancelButton" text="Cancel" press=".onCancelCreateTicket"/>
+        </endButton>
+
+   </Dialog>
+</core:FragmentDefinition>
+
+

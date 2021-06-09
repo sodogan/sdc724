@@ -1,0 +1,17 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+         <FlexBox direction="Column" class="sapUiSmallMargin">
+            <Title text="{parts:[{path:'templateName'} , {path:'businessAreaName'}],formatter:'.formatter.formatTitle'}" titleStyle="H2"/>
+            <FlexBox direction="Column" class="sapUiSmallMargin">
+                <FlexBox id='innerFlexFragmentTodList' direction="Column" class="sapUiSmallMarginBegin">
+                <Title text="{firstName} {lastName}" titleStyle="H2"/>
+                    <Label text="Manager:{manager}" class="sapUiTinyMarginTop"/>
+                <!-- 	<ObjectStatus icon="sap-icon://call" title="Primary:" text="{mobileNumber}" state="Error" class="sapUiMediumMarginTop"/> 
+                    <ObjectStatus icon="sap-icon://call" title="Second" text="{backupMobileNumber}" state="Warning" class="sapUiTinyMarginTop"/> -->
+            <!--         <Button id='oBtnPrimaryTod' type='Transparent' icon="sap-icon://call"  class="sapUiSmallMarginTop" text="{mobileNumber}"  tooltip="Call" press=".onTriggerPhoneCall"/>
+                    <Button id='oBtnSecondaryTod' type='Transparent' icon="sap-icon://call"  text="{backupMobileNumber}" class="myTest" tooltip="Call" press=".onTriggerPhoneCall"/>
+ -->                  </FlexBox>
+                  </FlexBox>
+              </FlexBox>
+   </core:FragmentDefinition>
+
+

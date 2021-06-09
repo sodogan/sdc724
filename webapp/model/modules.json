@@ -1,0 +1,116 @@
+[
+  {
+    "id": "865bfef2-d4fb-4a3a-9a0d-494c63e1f162",
+    "createdAt": 1607705700210,
+    "updatedAt": 1607705700210,
+    "createdBy": "admin",
+    "updatedBy": "admin",
+    "name": "VM",
+    "type": "functional",
+    "desc": "SAP Module",
+    "templateID": "279c0bf0-7776-4f25-82ac-0bca2c20ebeb"
+  },
+  {
+    "id": "965bfef2-d4fb-4a3a-9a0d-494c63e1f162",
+    "createdAt": 1607705700210,
+    "updatedAt": 1607705700210,
+    "createdBy": "admin",
+    "updatedBy": "admin",
+    "name": "EWM",
+    "type": "functional",
+    "desc": "SAP Module",
+    "templateID": "279c0bf0-7776-4f25-82ac-0bca2c20ebeb"
+  },
+  {
+    "id": "3c5dae20-5cb9-444a-942d-9f8f0b21b709",
+    "createdAt": 1607705700210,
+    "updatedAt": 1607705700210,
+    "createdBy": "admin",
+    "updatedBy": "admin",
+    "name": "QM",
+    "type": "functional",
+    "desc": "SAP Module",
+    "templateID":"a9e0d8eb-9727-44b6-b339-7af2bd4472a1"
+  },
+  {
+    "id": "c436e368-e3fa-4efd-a53b-1315711389f5",
+    "createdAt": 1607705700210,
+    "updatedAt": 1607705700210,
+    "createdBy": "admin",
+    "updatedBy": "admin",
+    "name": "PP",
+    "type": "functional",
+    "desc": "SAP Module",
+    "templateID": "b4763144-3541-4e82-a175-5b11ad4ffcb4"
+  },
+  {
+    "id": "678c0575-a3b6-40af-bcbc-a8ee8824a94a",
+    "createdAt": 1607705700210,
+    "updatedAt": 1607705700210,
+    "createdBy": "admin",
+    "updatedBy": "admin",
+    "name": "HR",
+    "type": "functional",
+    "desc": "SAP Module",
+    "templateID": "b4763144-3541-4e82-a175-5b11ad4ffcb4"
+
+  },
+  {
+    "id": "5a5c0575-a3b6-40af-bcbc-a8ee8824a94a",
+    "createdAt": 1607705700210,
+    "updatedAt": 1607705700210,
+    "createdBy": "admin",
+    "updatedBy": "admin",
+    "name": "SD",
+    "type": "functional",
+    "desc": "SAP Module",
+    "templateID": "b4763144-3541-4e82-a175-5b11ad4ffcb4"
+
+  },
+ {
+    "id": "6a5c0575-a3b6-40af-bcbc-a8ee8824a94a",
+    "createdAt": 1607705700210,
+    "updatedAt": 1607705700210,
+    "createdBy": "admin",
+    "updatedBy": "admin",
+    "name": "APO",
+    "type": "functional",
+    "desc": "SAP Module",
+    "templateID":"a9e0d8eb-9727-44b6-b339-7af2bd4472a1"
+
+  },
+  {
+    "id": "8c5c0575-a3b6-40af-bcbc-a8ee8824a94a",
+    "createdAt": 1607705700210,
+    "updatedAt": 1607705700210,
+    "createdBy": "admin",
+    "updatedBy": "admin",
+    "name": "SD",
+    "type": "functional",
+    "desc": "SAP Module",
+    "templateID": "43c59d44-68d2-44aa-aa2a-facf1baef60f"
+  },
+ {
+    "id": "9g5c0575-a3b6-40af-bcbc-a8ee8824a94a",
+    "createdAt": 1607705700210,
+    "updatedAt": 1607705700210,
+    "createdBy": "admin",
+    "updatedBy": "admin",
+    "name": "APO",
+    "type": "functional",
+    "desc": "SAP Module",
+    "templateID":  "43c59d44-68d2-44aa-aa2a-facf1baef60f"
+
+  },
+  {
+    "id": "01ef7d15-32d0-433f-9ba6-bd78f024d7ac",
+    "createdAt": 1607705541090,
+    "updatedAt": 1607705700323,
+    "createdBy": "admin",
+    "updatedBy": "admin",
+    "name": "MM",
+    "type": "functional",
+    "desc": "SAP Module",
+    "templateID":"a9e0d8eb-9727-44b6-b339-7af2bd4472a1"
+  }
+]

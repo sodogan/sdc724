@@ -1,0 +1,90 @@
+.myAppDemoWT .myCustomButton.sapMBtn {
+    margin-right: 0.125rem
+  }
+  
+  html[dir="rtl"] .myAppDemoWT .myCustomButton.sapMBtn {
+    margin-left: 0.125rem;
+    margin-right: 0 
+  }
+  .myAppDemoWT .textStyleBold {
+    font-weight: bold;
+  }
+
+.sapMLabel {
+    color: rgb(46, 156, 156);
+} 
+
+.sapMObjStatus .sapMObjStatusTitle {
+  color: rgb(156, 46, 119);
+} 
+
+.sapMTitle {
+    color: rgb(187, 0, 171);
+} 
+
+.myGoldenStyle .sapMTitle{
+  color: rgb(187, 168, 0);
+}
+
+.sapMOHR .sapMOHRAttr .sapMObjectAttributeTitle, .sapMOHR .sapMOHRAttr .sapMObjectAttributeText {
+  font-family: "Arial";
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #6a6d70;
+ 
+}
+
+.sapMText.sapMObjLTitle {
+  color: #40dc9b;
+  font-size: 1.125rem;
+}
+
+.sapMBtnIcon .myButton {
+  color: #b00 !important;
+  font-family: Arial;
+  font-size: 1.4rem;
+}
+
+
+
+/* Style: Phone calls */
+/*----------------------------------------------------------*/
+
+.sapMBtnPhonePrimary {
+  color: #b00 !important;
+
+}
+
+.sapMBtnPhoneSecondary {
+  color: rgb(0, 134, 187) !important;
+}
+
+
+
+/* Style: MessageToast */
+/*----------------------------------------------------------*/
+
+
+.sapMMessageToastSuccess {
+  color: #4F8A10 !important;
+  background-color: #DFF2BF !important;
+  border: 1px solid #4F8A10 !important;
+  border-left: 7px solid #4F8A10 !important;
+}
+
+
+.sapMMessageToastInfo {
+  color: #00529B !important;
+  background-color: #BDE5F8 !important;
+  border: 1px solid #00529B !important;
+  border-left: 7px solid #00529B !important;
+}
+
+
+.sapMMessageToastWarning {
+  color: #9F6000 !important;
+  background-color: #FEEFB3 !important;
+  border: 1px solid #9F6000 !important;
+  border-left: 7px solid #9F6000 !important;
+}
+

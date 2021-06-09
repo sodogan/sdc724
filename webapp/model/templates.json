@@ -1,0 +1,64 @@
+[
+  {
+    "id": "279c0bf0-7776-4f25-82ac-0bca2c20ebeb",
+    "createdAt": 1607705037311,
+    "updatedAt": 1607705037312,
+    "createdBy": "admin",
+    "updatedBy": "admin",
+    "name": "MBT",
+    "desc": "MBT",
+    "templateManager":"Atilla Adıguzel"
+    },
+  {
+    "id": "a9e0d8eb-9727-44b6-b339-7af2bd4472a1",
+    "createdAt": 1607705037311,
+    "updatedAt": 1607705037312,
+    "createdBy": "admin",
+    "updatedBy": "admin",
+    "name": "AMG",
+    "desc": "AMG",
+    "templateManager":"Atilla Adıguzel"
+
+  },
+  {
+    "id": "b4763144-3541-4e82-a175-5b11ad4ffcb4",
+    "createdAt": 1607705037311,
+    "updatedAt": 1607705037312,
+    "createdBy": "admin",
+    "updatedBy": "admin",
+    "name": "PCS",
+    "desc": "PCS",
+    "templateManager":"Atilla Adıguzel"
+
+  },
+  {
+    "id": "43c59d44-68d2-44aa-aa2a-facf1baef60f",
+    "createdAt": 1607705037311,
+    "updatedAt": 1607705037313,
+    "createdBy": "admin",
+    "updatedBy": "admin",
+    "name": "PCC",
+    "desc": "PCC",
+    "templateManager":"Atilla Adıguzel"
+    },
+  {
+    "id": "ee0fc4b3-24d8-4086-ace1-f70561377edd",
+    "createdAt": 1607704992199,
+    "updatedAt": 1607705037607,
+    "createdBy": "admin",
+    "updatedBy": "admin",
+    "name": "PT-Nord",
+    "desc": "PT-Nord",
+    "templateManager":"Atilla Adıguzel"
+    },
+  {
+    "id": "d3dba112-006b-476f-b17c-6a597f267ce4",
+    "createdAt": 1607704992199,
+    "updatedAt": 1607705037609,
+    "createdBy": "admin",
+    "updatedBy": "admin",
+    "name": "PT-Süd",
+    "desc": "PT-Süd",
+    "templateManager":"Atilla Adıguzel"
+    }
+]

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SDC 7/24 Tod Mod App</title>
+
+    <!-- load UI5 core library -->
+    <script
+      id="sap-ui-bootstrap"
+      src="https://openui5.hana.ondemand.com/1.85.0/resources/sap-ui-core.js" 
+      data-sap-ui-language="en"
+      data-sap-ui-theme="sap_fiori_3"
+      data-sap-ui-compatVersion="edge"
+      data-sap-ui-resourceroots='{
+            "demo.ui5.TodModApp": "./"
+        }'
+      data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
+      data-sap-ui-logLevel= "all"
+    ></script>
+  </head>
+
+  <body class="sapUiBody">
+    <!-- 
+        ComponentSupport.run() will select element 
+        with attribute 'data-sap-ui-component'
+        to render UI area -->
+    <div
+      data-sap-ui-component
+      data-name="demo.ui5.TodModApp"
+      data-id="container"
+      data-settings='{"id" : "TodModApp"}'
+    ></div>
+  </body>
+</html>

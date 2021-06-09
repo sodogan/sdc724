@@ -1,0 +1,64 @@
+<mvc:View
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	controllerName="demo.ui5.TodModApp.controller.Detail">
+	    <Page title='{i18n>detailPageTitle}' showNavButton='true' navButtonPress='.onBackPressed'>
+		<content>
+				<Panel headerText='Details'>
+					<content>
+					<VBox>
+					<Text text="Search Result"/>
+	<!--				<Button text="Go back to previos View" press=".onBackPressed"/>
+	-->
+					</VBox>
+					</content>
+				</Panel>
+               <Panel>
+					<Table   items="{path: '/users',
+									sorter: { path: 'name' }
+								}">
+						<columns>
+						  <Column> 
+						     <Text text= 'FirstName' class='textStyleBold'/>
+						 </Column> 
+						  <Column> 
+						     <Text text= 'LastName' class='textStyleBold'/>
+						  </Column> 
+						  <Column> 
+						     <Text text= 'Email-Address' class='textStyleBold'/>
+						  </Column> 
+						  <Column> 
+						     <Text text='Mobile' class='textStyleBold'/>
+						  </Column> 
+						  <Column> 
+						     <Text text='Backup Mobile' class='textStyleBold'/>
+						  </Column> 
+						  <Column> 
+						     <Text text='Manager' class='textStyleBold'/>
+						  </Column>
+						  <Column> 
+						     <Label text= 'Is External' class='textStyleBold'/>
+						 </Column> 
+						  <Column> 
+						     <Label text= 'Call' class='textStyleBold'/>
+						 </Column> 
+					   </columns>
+						<items>
+						 <ColumnListItem>
+						  <Text text='{firstName}'/>
+						  <Text text='{lastName}'/>
+						  <Text text='{emailAddress}'/>
+						  <Text text='{mobileNumber}'/>
+						  <Text text='{backupMobileNumber}'/>
+						  <Text text='{manager}'/>
+						  <Text text='{isExternal}'/>
+						 <!--<Text text='{mock>Phone}'/>-->
+						  <core:Icon src="sap-icon://call" />
+						  </ColumnListItem>
+						</items>
+					</Table>
+				 </Panel> 
+		</content>
+	</Page>	 
+</mvc:View>
